@@ -15,9 +15,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 /**
  * Created by stolbovd on 08.09.16.
+ * decoratedClass
+ * Example of question: how to exclude decoratedClass from JSON links, created from Projection and
+ *  received with Spring @RestController
+ * https://jira.spring.io/browse/DATAREST-890 https://jira.spring.io/browse/DATACMNS-909
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

@@ -14,31 +14,21 @@
  * limitations under the License.
  */
 
-package ru.inkontext.domain;
+package ru.inkontext.domain.projections;
 
-import lombok.Getter;
-import lombok.Setter;
+import org.springframework.data.rest.core.config.Projection;
+import ru.inkontext.domain.Person;
 
-import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
-@Entity
-@Getter @Setter
-public class Person implements Serializable {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+@Projection(name = "full", types = Person.class)
+public interface PersonFullProjection {
 
-	@Column
-	private String name;
+	Long getId();
 
-	@Column
-	private Date birthday;
+	String getName();
 
-	@OneToOne
-	private Adress adress;
+	Date getBirthday();
 
-	protected Person() {
-	}
+	AdressCityProjection getAdress();
 }

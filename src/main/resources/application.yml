@@ -10,4 +10,12 @@ spring:
     show-sql: true
 logging:
   level:
+    org.springframework.data.rest: DEBUG
 #    org.hibernate: DEBUG
+
+---
+
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE

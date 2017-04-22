@@ -16,25 +16,8 @@
 
 package ru.inkontext.persistence;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
-import ru.inkontext.domain.Person;
-import ru.inkontext.domain.projections.PersonCityProjection;
+import ru.inkontext.domain.Adress;
 
-import java.util.List;
-
-public interface PersonRepository extends CrudRepository<Person, Long> {
-
-	@Query("select p from Person p left join p.adress a order by a.city, a.street")
-	List<Person> findAllOrderByAdress();
-
-	@Query("select p, a from Person p left join p.adress a where p.id = ?1")
-	Person findById(Long id);
-
-	PersonCityProjection findProjectedById(Long id);
-
-	<T> T findProjectedClassById(Long id, Class<T> projection);
-
-	List<Person> findByAdressId(@Param("adress") Long adressId);
+public interface AdressRepository extends CrudRepository<Adress, Long> {
 }
