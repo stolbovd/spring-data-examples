@@ -1,2 +1,2 @@
 # spring-data-examples
-Examples of Spring Framework
+Examples of use Spring Framework
