@@ -1,2 +1,3 @@
 # spring-data-examples
-Examples of use Spring Framework
+Examples of use Spring Data Project
+

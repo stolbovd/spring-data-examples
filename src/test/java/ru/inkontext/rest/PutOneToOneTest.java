@@ -19,9 +19,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 /**
  * Created by stolbovd on 22.04.17.
+ *
+ * DATAREST-1061 https://jira.spring.io/browse/DATAREST-1061
  * PUT-request with application/json media type payload can not update association @OneToOne by URI.
  *
- * This code not worked from Spring Boot 1.4.4.Release.
+ * This code not worked from Spring Boot 1.4.4.Release, Spring Data REST 2.5.7.Release&
  * Code is working in Spring Boot 1.4.3.Release and do not working in 1.5.3.Release.
  *
  * POST-request with URI in payload is creating @OneToOne association in all version of Spring
@@ -61,6 +63,7 @@ public class PutOneToOneTest {
 				.andExpect(jsonPath("adress.id").value(2))
 				.andExpect(jsonPath("adress.city").value("Surgut"));
 
+		//FixMe This not worked from Spring Boot 1.4.4.Release, Spring Data REST 2.5.7.Release.
 		mockMvc.perform(put("/rest/api/persons/"+id+"?projection=full")
 				.contentType(APPLICATION_JSON_UTF8)
 				.content("{\"name\": \"Maria\", \"adress\": \"/rest/api/adresses/4\"}"))
