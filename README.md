@@ -5,5 +5,5 @@ Start from:
 1. [DecoratedClassTest]
 2. [PutOneToOneTest]
 
-[PutOneToOneTest]: https://github.com/stolbovd/spring-data-examples/blob/master/src/test/java/ru/inkontext/rest/DecoratedClassTest.java
-[DecoratedClassTest]: https://github.com/stolbovd/spring-data-examples/blob/master/src/test/java/ru/inkontext/rest/PutOneToOneTest.java 
+[PutOneToOneTest]: https://github.com/stolbovd/spring-data-examples/blob/master/src/test/java/ru/inkontext/rest/PutOneToOneTest.java
+[DecoratedClassTest]: https://github.com/stolbovd/spring-data-examples/blob/master/src/test/java/ru/inkontext/rest/DecoratedClassTest.java 
